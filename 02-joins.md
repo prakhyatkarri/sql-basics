@@ -69,3 +69,68 @@ ORDER BY P.ProductID
 ;
 ```
 ![image](./diagrams/sales-product-product-id-left-join.png)
+
+#### Right Join
+RIght join joins two tables on selected column(s) and displays all records from right table and only matched records from left table. If there is no match in left table, 0 records will be displayed.
+
+```
+SELECT 
+	P.ProductID, P.Name, P.ProductNumber,
+	S.ProductID, S.SalesOrderDetailID, S.SalesOrderID, S.OrderQty, S.LineTotal
+FROM 
+	Production.Product P
+RIGHT JOIN
+	Sales.SalesOrderDetail S
+ON
+	P.ProductID = S.ProductID
+ORDER BY 
+	P.ProductID
+;
+```
+![image](./diagrams/sales-product-product-id-right-join.png)
+
+#### Full/Outer Join
+Full/Outer join joins two tables on selected column(s) and displays all records from both tables. If there is no match, records from unmatched table will be shows as NULL.
+
+```
+-- SELECT P.ProductID, P.Name, P.ProductNumber FROM Production.Product P;
+-- SELECT S.SalesOrderDetailID, S.SalesOrderID, S.ProductID, S.OrderQty, S.LineTotal FROM Sales.SalesOrderDetail S;
+
+SELECT 
+	P.ProductID, P.Name, P.ProductNumber,
+	S.ProductID, S.SalesOrderDetailID, S.SalesOrderID, S.OrderQty, S.LineTotal
+FROM 
+	Production.Product P
+FULL JOIN
+	Sales.SalesOrderDetail S
+ON
+	P.ProductID = S.ProductID
+ORDER BY 
+	P.ProductID
+;
+
+```
+```
+-- SELECT P.ProductID, P.Name, P.ProductNumber FROM Production.Product P;
+-- SELECT S.SalesOrderDetailID, S.SalesOrderID, S.ProductID, S.OrderQty, S.LineTotal FROM Sales.SalesOrderDetail S;
+
+SELECT 
+	P.ProductID, P.Name, P.ProductNumber,
+	S.ProductID, S.SalesOrderDetailID, S.SalesOrderID, S.OrderQty, S.LineTotal
+FROM 
+	Production.Product P
+FULL OUTER JOIN
+	Sales.SalesOrderDetail S
+ON
+	P.ProductID = S.ProductID
+ORDER BY 
+	P.ProductID
+;
+
+```
+![image](./diagrams/sales-product-product-id-full-outer-join.png)
+
+
+
+
+
