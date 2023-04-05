@@ -8,7 +8,7 @@ USE AdventureWorks2019;
 
 ## CRUD
 
-#### Create a Database
+#### Create a Sample Table
 
 ```
 CREATE TABLE SAMPLE_TABLE (
@@ -17,4 +17,33 @@ NAME VARCHAR(50) NOT NULL,
 AGE INT,
 PRIMARY KEY (ID)
 );
+```
+
+#### Insert record in this table
+
+```
+INSERT INTO DBO.SAMPLE_TABLE 
+(ID, NAME, AGE) 
+VALUES 
+(101, 'John Smith', 30);
+```
+
+#### Retrieve/Select records from table
+
+All records
+
+```
+SELECT * FROM SAMPLE_TABLE;
+```
+
+Based on condition
+
+```
+SELECT * FROM SAMPLE_TABLE WHERE ID=101;
+```
+
+Only specific columns
+
+```
+SELECT NAME FROM SAMPLE_TABLE WHERE ID=101;
 ```
