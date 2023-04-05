@@ -28,9 +28,6 @@ WHERE
 Above query can also be written as below
 
 ```
--- SELECT P.ProductID, P.Name, P.ProductNumber FROM Production.Product P;
--- SELECT S.SalesOrderDetailID, S.SalesOrderID, S.ProductID, S.OrderQty, S.LineTotal FROM Sales.SalesOrderDetail S;
-
 SELECT 
 	P.ProductID, P.Name, P.ProductNumber,
 	S.ProductID, S.SalesOrderDetailID, S.SalesOrderID, S.OrderQty, S.LineTotal
@@ -42,9 +39,7 @@ ON
 	P.ProductID = S.ProductID
 ;
 ```
--- SELECT P.ProductID, P.Name, P.ProductNumber FROM Production.Product P;
--- SELECT S.SalesOrderDetailID, S.SalesOrderID, S.ProductID, S.OrderQty, S.LineTotal FROM Sales.SalesOrderDetail S;
-
+```
 SELECT 
 	P.ProductID, P.Name, P.ProductNumber,
 	S.ProductID, S.SalesOrderDetailID, S.SalesOrderID, S.OrderQty, S.LineTotal
@@ -56,8 +51,6 @@ ON
 	P.ProductID = S.ProductID
 ;
 ```
-```
-
 
 #### Left Join
 Left join joins two tables on selected colun(s) and displays matched records along with all records from left mentioned table. For the records that doesn't have a match, records from right mentioned table will be shown as NULL.
