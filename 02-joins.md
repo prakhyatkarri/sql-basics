@@ -93,9 +93,6 @@ ORDER BY
 Full/Outer join joins two tables on selected column(s) and displays all records from both tables. If there is no match, records from unmatched table will be shows as NULL.
 
 ```
--- SELECT P.ProductID, P.Name, P.ProductNumber FROM Production.Product P;
--- SELECT S.SalesOrderDetailID, S.SalesOrderID, S.ProductID, S.OrderQty, S.LineTotal FROM Sales.SalesOrderDetail S;
-
 SELECT 
 	P.ProductID, P.Name, P.ProductNumber,
 	S.ProductID, S.SalesOrderDetailID, S.SalesOrderID, S.OrderQty, S.LineTotal
@@ -111,9 +108,6 @@ ORDER BY
 
 ```
 ```
--- SELECT P.ProductID, P.Name, P.ProductNumber FROM Production.Product P;
--- SELECT S.SalesOrderDetailID, S.SalesOrderID, S.ProductID, S.OrderQty, S.LineTotal FROM Sales.SalesOrderDetail S;
-
 SELECT 
 	P.ProductID, P.Name, P.ProductNumber,
 	S.ProductID, S.SalesOrderDetailID, S.SalesOrderID, S.OrderQty, S.LineTotal
@@ -130,7 +124,4 @@ ORDER BY
 ```
 ![image](./diagrams/sales-product-product-id-full-outer-join.png)
 
-
-
-
-
+  
